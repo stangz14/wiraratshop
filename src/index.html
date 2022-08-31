@@ -7,43 +7,47 @@
     <title>Wirarat shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="index.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-[#DCE0DE]">
-    <nav class="bg-black text-white  w-full h-10 gap-x-4 px-2 py-1 ">
-        <a href="#">Logo</a>
-        <a href="#">สินค้า</a>
-        <a href="#">สินค้า</a>
+    <nav class="bg-black text-white  w-full h-20  px-2 justify-between flex items-center px-5 ">
+        <div class="">
+            logo
+        </div>
+        <div class="">
+            <i class="fa fa-cart-shopping"></i>
+        </div>
 
     </nav>
-    <div class="w-3/4 bg-white mx-auto"> <! -- container --> 
-        <div class=" bg-[#ff0000] w-10/12 h-32 mx-auto mb-2  "> 
-           <figure class="relative float-left ">
+    <div class="w-3/4 bg-white mx-auto h-full"> <! -- container --> 
+        <div class=" bg-[#ff0000] w-10/12 h-32 mx-auto my-2"> 
+           <figure class="relative float-left">
               <img src="../src/img/3996157.jpg" class="w-full">
            </figure>
         </div>
         <div class="flex w-3/4 gap-x-2 justify-between mx-auto py-5 ">
-            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md">
+            <div class="border-2 border-slate-200 hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer bg-[#F6F6F6]">
                 <div class="mx-auto w-2/5 mt-1">
                     <img src="../src/img/fast-food.png" class="">
                 </div>
                 <a href="" class="mx-auto">ของกิน</a>
             </div>
 
-            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md">
+            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
                     <img src="../src/img/pencil.png" class="">
                 </div>
                 <a href="" class="mx-auto">ของกิน</a>
             </div>
 
-            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md">
+            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
                     <img src='../src/img/broom.png'>
                 </div>
                 <a href="" class="mx-auto">as</a>
             </div>
 
-            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md">
+            <div class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
                     <img src="../src/img/grid.png" class="">
                 </div>
@@ -51,8 +55,15 @@
             </div>
             
         </div>
-        
-        <iframe src="../src/product.html" class="w-full h-auto"></iframe>
+        <div class="w-full bg-black grid grid-cols-5 gap-2">
+            <div class="bg-white">
+                <img src="../src/img/anh-nguyen-kcA-c3f_3FE-unsplash.jpg">
+                <p>Product name</p>
+                <p>500 THB</p>
+
+            </div>
+
+        </div>
 
     </div>
 </body> 
