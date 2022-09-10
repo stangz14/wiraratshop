@@ -5,10 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wirarat shop</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
@@ -18,8 +16,11 @@
         <div class="">
             logo
         </div>
-        <div class="">
-            <i class="fa fa-cart-shopping"></i>
+        <div onclick="openCart()" class="cursor-pointer">
+            <i class="fa fa-cart-shopping text-xl "></i>
+            <div id="cartcount" class="cartcount bg-red-600 absolute top-0.5 right-3 rounded-2xl p-1 text-xs hidden">
+                0
+            </div>
         </div>
 
     </nav>
@@ -46,7 +47,7 @@
 
             <div onclick="searchproduct('clothes')" class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
-                    <img src='../src/img/broom.png'>
+                    <img src='../src/img/tshirt.png'>
                 </div>
                 <a href="" class="mx-auto">Clothes</a>
             </div>
@@ -75,8 +76,8 @@
 
 
     <!-- modal box -->
-    <div id="modalDesc"  class="bg-slate-500/50 top-0 float-0 fixed w-full h-full flex hidden modal">
-        <div onclick="closeModal()" class=""></div>
+    <div id="modalDesc"  class="modal bg-slate-500/50 top-0 float-0 hidden fixed w-full h-full flex">
+        <div onclick="closeModal()" class="w-full h-full fixed top-0 "></div>
         <div class="bg-white  relative m-auto items-center justify-center rounded-md p-2 max-w-3xl">
             <p class="text-xl">Detail</p>
             <br>
@@ -92,7 +93,7 @@
                         <button onclick="closeModal()" class="border cursor-pointer px-2.5 py-2.5 rounded-md">
                             close
                         </button>
-                        <button onclick="closeModal()"  class="ml-2 cursor-pointer bg-[#FF69B4] px-2.5 py-2.5 rounded-md">
+                        <button onclick="addtocart()"  class="ml-2 cursor-pointer bg-[#FF69B4] px-2.5 py-2.5 rounded-md">
                             add to cart
                         </button>
                     </div>
@@ -102,13 +103,14 @@
     </div>
 
     <!-- cart list -->
-    <div class="bg-slate-500/50 top-0 float-0 fixed w-full h-full flex hidden">
-        <div class=""></div>
+    <div  id="modalCart" class="modal bg-slate-500/50 top-0 float-0 fixed w-full h-full flex hidden ">
+        <div onclick="closeModal()" class="w-full h-full fixed top-0"></div>
         <div class="bg-white  relative m-auto items-center justify-center rounded-md p-2 max-w-3xl w-96">
             <p class="text-xl">My cart</p>
             <br>
-            <div class="">
-                <div class="flex justify-between mb-2.5">
+            <div id="mycart" class="cartlist">
+            </div>
+             <!-- <div class="flex justify-between mb-2.5">
                     <div class="flex">
                         <img src="../src/img/anh-nguyen-kcA-c3f_3FE-unsplash.jpg" class="object-cover w-24 rounded-md">
                         <div class="ml-2.5"> 
@@ -121,12 +123,10 @@
                         <p class="mx-2">1</p>
                         <p class=" border border-black px-2 rounded-3xl cursor-pointer">+</p>
                     </div>
-                </div>
-                
-            </div>
+                </div> -->
             <br>
             <div class="flex justify-end">
-                <button class="border cursor-pointer px-2.5 py-2.5 rounded-md">
+                <button onclick="closeModal()" class="border cursor-pointer px-2.5 py-2.5 rounded-md">
                     Cancel
                 </button>
                 <button class="ml-2 cursor-pointer bg-[#FF69B4] px-2.5 py-2.5 rounded-md">
