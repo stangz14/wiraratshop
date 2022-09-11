@@ -6,15 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wirarat shop</title>
     <link href="/dist/output.css" rel="stylesheet">
+    <link href="input.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyC8cuPL_cvmJmNiCxT2HugVNYH9VpDs8VU",
+          authDomain: "wiraratshop-af1d1.firebaseapp.com",
+          projectId: "wiraratshop-af1d1",
+          storageBucket: "wiraratshop-af1d1.appspot.com",
+          messagingSenderId: "952981961546",
+          appId: "1:952981961546:web:4a47e07d1ea1b3e97e5fb3",
+          measurementId: "G-FWH0VWGLBX"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    
 </head>
 <body class="bg-[#DCE0DE]">
-    <nav class="bg-gradient-to-r from-[#FF69B4] to-[#FF1493] text-white  w-full h-12  px-2 justify-between flex items-center px-5 ">
-        <div class="">
-            logo
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <nav class="  bg-gradient-to-r from-[#FF69B4] to-[#FF1493] text-white  w-full h-14  px-2 justify-between flex items-center px-5 ">
+        <div class="lg:w-2/6 md:w-2/4">
+             <img class="w-2/12 py-2 object-contain" src="https://scontent.fhdy2-1.fna.fbcdn.net/v/t1.15752-9/303563693_1445584585945735_1972405124717646574_n.png?_nc_cat=100&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeF94i-qNPBGps9AEDxo7jEfB0sPiF3KSJkHSw-IXcpImRn-uYQ71KtvlN94nF3FaHH6nekBeqxgRa2Fo_Z9I6Ql&_nc_ohc=a1eb0K_di0kAX-OC74n&_nc_ht=scontent.fhdy2-1.fna&oh=03_AVJY1yfo9Qj_n1NIk1cgJoxAXVA0AifZq0A6WZ9fyztIwQ&oe=6340DA6D" >
         </div>
         <div onclick="openCart()" class="cursor-pointer">
             <i class="fa fa-cart-shopping text-xl "></i>
@@ -22,39 +51,40 @@
                 0
             </div>
         </div>
+        
 
     </nav>
     
-    <div class="w-3/4 bg-white mx-auto h-full">
+    <div class="lg:w-3/4 bg-white mx-auto h-full md:w-full">
         <br>  
-        <div class=" bg-[#ff0000] w-4/5 h-52 mx-auto relative ">
-            <img src="../src/img/banner-car.jpg" class="bottom-0.5 h-full w-full object-cover"> 
+        <div class=" bg-[#ff0000] w-4/5 h-52 mx-auto relative  ">
+            <img src="https://images.unsplash.com/photo-1526639161668-9059dc1eb868?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="bottom-0.5 h-full w-full object-cover"> 
         </div>
-        <div class="flex w-3/4 gap-x-2 justify-between mx-auto py-5 ">
-            <div onclick="searchproduct('food')" class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
+        <div class="grid grid-cols-2 justify-items-center w-3/4 gap-2 justify-between mx-auto py-5 mb:text-xs lg:text-base lg:grid-cols-4 ">
+            <div onclick="searchproduct('food')" class="border-2 border-white hover:border-black w-3/5 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
-                    <img src="../src/img/fast-food.png" class="">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3655/3655608.png" class="">
                 </div>
                 <a href="" class="mx-auto">Food</a>
             </div>
 
-            <div onclick="searchproduct('stationery')" class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
+            <div onclick="searchproduct('stationery')" class="border-2 border-white hover:border-black w-3/5 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
-                    <img src="../src/img/pencil.png" class="">
+                    <img src="https://cdn-icons-png.flaticon.com/512/481/481874.png" class="">
                 </div>
                 <a href="" class="mx-auto">stationery</a>
             </div>
 
-            <div onclick="searchproduct('clothes')" class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
+            <div onclick="searchproduct('clothes')" class="border-2 border-white hover:border-black w-3/5 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
-                    <img src='../src/img/tshirt.png'>
+                    <img src='https://cdn-icons-png.flaticon.com/512/863/863684.png'>
                 </div>
                 <a href="" class="mx-auto">Clothes</a>
             </div>
 
-            <div onclick="searchproduct('all')" class="border-2 border-white hover:border-black w-2/12 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
+            <div onclick="searchproduct('all')" class="border-2 border-white hover:border-black w-3/5 grid hover:shadow-xl rounded-md transition delay-100 cursor-pointer">
                 <div class="mx-auto w-2/5 mt-1">
-                    <img src="../src/img/grid.png" class="">
+                    <img src="https://cdn-icons-png.flaticon.com/512/443/443635.png" class="">
                 </div>
                 <a href="" class="mx-auto">All</a>
             </div>
@@ -63,7 +93,7 @@
         <hr class="h-0.5 bg-black">
         <br>
 
-        <div id="productlist" class="w-full grid grid-cols-5 gap-2 pl-2 pr-2">
+        <div id="productlist" class="w-full grid grid-cols-3 lg:grid-cols-5 gap-2 pl-2 pr-2 ">
              
         </div>
         <!-- <div class="bg-white p-2 cursor-pointer transition delay-100 hover:scale-105 hover:shadow-xl">
@@ -78,10 +108,10 @@
     <!-- modal box -->
     <div id="modalDesc"  class="modal bg-slate-500/50 top-0 float-0 hidden fixed w-full h-full flex">
         <div onclick="closeModal()" class="w-full h-full fixed top-0 "></div>
-        <div class="bg-white  relative m-auto items-center justify-center rounded-md p-2 max-w-3xl">
+        <div class="bg-white  relative m-auto items-center justify-center rounded-md p-2 max-w-xl">
             <p class="text-xl">Detail</p>
             <br>
-            <div class="flex ">
+            <div class="lg:flex">
                 <img id="mdd-img" src="../src/img/anh-nguyen-kcA-c3f_3FE-unsplash.jpg" class="object-cover w-48 rounded-md ">
                 <div class="p-2">
                     <p id="mdd-name" class="text-xl">Product name</p>
@@ -125,13 +155,18 @@
                     </div>
                 </div> -->
             <br>
-            <div class="flex justify-end">
-                <button onclick="closeModal()" class="border cursor-pointer px-2.5 py-2.5 rounded-md">
-                    Cancel
-                </button>
-                <button class="ml-2 cursor-pointer bg-[#FF69B4] px-2.5 py-2.5 rounded-md">
-                    Buy
-                </button>
+            <div class="flex justify-between">
+                <div class="flex gap-x-2" id="Total">
+                                  
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="closeModal()" class="border cursor-pointer px-2.5 py-2.5 rounded-md">
+                        Cancel
+                    </button>
+                    <button class="ml-2 cursor-pointer bg-[#FF69B4] px-2.5 py-2.5 rounded-md">
+                        Buy
+                    </button>
+                </div>
             </div>
         </div>
     </div>
