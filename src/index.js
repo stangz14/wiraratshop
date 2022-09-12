@@ -2,84 +2,84 @@ var total = 0;
 var product = [{
     id: 1,
     img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-    name: 'salad',
+    name: 'Salad',
     price: 35,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'food'
 }, {
     id: 2,
     img: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-    name: 'T-shirt',
+    name: 'T-Shirt',
     price: 120,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'clothes'
 }, {
     id: 3,
     img: 'https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    name: 'pen',
+    name: 'Pen',
     price: 10,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'stationery'
 }, {
     id: 4,
     img: 'https://images.unsplash.com/photo-1598214886806-c87b84b7078b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80',
-    name: 'pancake',
+    name: 'Pancake',
     price: 25,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'food'
 }, {
     id: 5,
     img: 'https://images.unsplash.com/photo-1533007576165-faccd6a6a056?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    name: 'yoghurt',
+    name: 'Yoghurt',
     price: 35,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'food'
 }, {
     id: 6,
     img: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
-    name: 'cake',
+    name: 'Cake',
     price: 45,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'food'
 }, {
     id: 7,
     img: 'https://images.unsplash.com/photo-1618354691321-e851c56960d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1915&q=80',
-    name: 'black-shirt 705',
+    name: 'Black-shirt 705',
     price: 120,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'clothes'
 }, {
     id: 8,
     img: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    name: 'nike',
+    name: 'Nike',
     price: 4500,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'clothes'
 }, {
     id: 9,
     img: 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80',
-    name: 'red-shoes',
+    name: 'Red-Shoes',
     price: 500,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'clothes'
 }, {
     id: 10,
     img: 'https://images.unsplash.com/photo-1568205612837-017257d2310a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-    name: 'pencil',
+    name: 'Pencil',
     price: 10,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'stationery'
 }, {
     id: 11,
     img: 'https://images.unsplash.com/photo-1568639152391-61b4303bead7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80',
-    name: 'note',
+    name: 'Note',
     price: 30,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'stationery'
 }, {
     id: 12,
     img: 'https://images.unsplash.com/photo-1612367980327-7454a7276aa7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-    name: 'note',
+    name: 'Note',
     price: 25,
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit nobis, id pariatur porro quos eaque sequi tempore quae eum dolore voluptatibus labore rerum vel. Quibusdam iure obcaecati consequuntur voluptas alias.',
     type:'stationery'
@@ -91,11 +91,11 @@ $(document).ready(() => {
     var html = '';
     for (let i = 0; i < product.length; i++) {
         html += `<div onclick="openProductDetail(${i})" class="${product[i].type} bg-white p-2 cursor-pointer transition delay-100 hover:scale-105 hover:shadow-xl product-items hover:rounded-xl">
-                      <div class="rounded-xl w-24 h-24 mx-auto lg:w-36 lg:h-36">
-                      <img src="${product[i].img}" class=" mx-auto object-cover w-full h-full rounded-xl">
-                       </div>
-                    <p class="text-sm lg:text-base">${product[i].name}</p>
-                    <p class="text-xs lg:text-sm">${ numberWithCommas(product[i].price)} THB</p>
+                  <div class="rounded-xl w-24 h-24 m-auto lg:w-36 lg:h-36">
+                    <img src="${product[i].img}" class=" mx-auto object-cover w-full h-full rounded-xl">
+                  </div class="pl-2">
+                   <p class="text-sm lg:text-base">${product[i].name}</p>
+                   <p class="text-xs lg:text-sm">${ numberWithCommas(product[i].price)} THB</p>
                  </div>`;
     }
     $("#productlist").html(html);
@@ -105,12 +105,12 @@ $(document).ready(() => {
 function numberWithCommas(x) {
     x = x.toString();
     var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x))
+    while (pattern.test(x)) 
         x = x.replace(pattern, "$1,$2");
     return x;
 }
 
-function searchproduct(param) {
+function searchproduct(param) { 
     console.log(param)
     $(".product-items").css('display', 'none')
     if(param == 'all') {
@@ -172,6 +172,21 @@ function openCart() {
     rendercart();
 }
 
+
+function buyproduct() {
+    if(cart.length > 0) {
+        var html= '';
+        for (let i = 0; i < cart.length; i++ ){
+            html += ``;
+        }
+        $("#mycart").html(html)
+        cart.length = 0;        
+        $("#cartcount").css('display','none').text(cart.length)
+        $("#mycart").html(`<p>Not found product list</p>`)
+    }
+
+
+}
 
 function rendercart() {
     if(cart.length > 0) {
